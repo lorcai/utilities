@@ -1,1 +1,3 @@
 # utilities
+
+Barebones repository for helper functions, fixes, etc...
