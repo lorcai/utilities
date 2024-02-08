@@ -4,6 +4,6 @@
 
 ### Make a tsv table from fasta files
 
-First column is sequence id, second is sequence 
+First column is sequence id, second is sequence. Can be useful for preparing ENA annotated sequence uploads with many sequences.
 
 ```for i in $(ls -1 *.fasta); do awk '/^>/ { seq=""; id=substr($0, 2); sub(/[ \t]+$/, "", id); printf("%s\t", id); next } { seq = seq $0 } END { if (seq) print seq }' $i; done > sequence_table.tsv```
