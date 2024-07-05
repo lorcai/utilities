@@ -10,10 +10,14 @@ This is a quickfix that changes "SYMBOL" for a "GENENAME" column. Still hardcode
 Also, in the current ENSEMBL GTF some of the "gene_ID" fields are SGD (Saccharomyces Genome Database) Systematic identifiers/ENSEMBL ID and a few snoRNA are GENENAMES, which get lost in translation if you are not careful and translate only from ENSEMBLID -> ENTREZID (ENTREZID is the one that seems to be more complete and compatible with most DBs).
 
 ### get_KEGG_pathway_gene_names.R
+
 Get the gene names from a KEGG pathway, useful to get a list of genes from which you can filter and expression dataframe to make a heatmap of the pathway.
+Remember to change the keggEntry for the pathway you want.
 
 ### get_KEGG_pathway_gene_names_table.R
-Same thing but instead it outputs a table with the entrez_gene_id, gene_name and gene_description
+
+Same thing but instead it outputs a table with the entrez_gene_id, gene_name and gene_description. 
+If there is a gene with no gene name, NA is inserted in the table.
 
 ### human_to_mouse_symbol_table.R
 
