@@ -10,7 +10,8 @@ if (!requireNamespace("KEGGREST", quietly = TRUE)) {
 library(KEGGREST)
 
 # Get the pathway information for mmu00190 (oxidative phosphorylation in mouse)
-pathway <- keggGet("mmu00190")
+keggEntry <- "mmu00190"
+pathway <- keggGet(keggEntry)
 
 # Extract the list of genes from the pathway information
 genes <- pathway[[1]]$GENE
@@ -42,4 +43,4 @@ gene_table <- data.frame(
 )
 
 # Print the resulting data frame
-print(gene_table)
+write.table(gene_table, file=paste(keggEntry, "_gene_table", ".tsv", sep=""), row.names=FALSE, quote=FALSE, sep="\t")
