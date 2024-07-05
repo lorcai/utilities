@@ -1,4 +1,5 @@
 # GPT4o made this! 
+# Well a great part of it...
 
 # Install KEGGREST if not already installed
 if (!requireNamespace("KEGGREST", quietly = TRUE)) {
