@@ -1,5 +1,6 @@
 # Useful one liners
 
+I'm not putting here the one that you can usually find around but rather the ones that I had to make (or had to ask ChatGPT)
 ## Handling fasta files
 
 ### Make a tsv table from fasta files
