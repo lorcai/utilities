@@ -26,9 +26,17 @@ descriptions <- c()
 for (i in seq(1, length(genes), by = 2)) {
     entrez_id <- genes[i]
     gene_description <- genes[i + 1]
-    gene_info <- unlist(strsplit(gene_description, "; "))
-    gene_name <- gene_info[1]
-    description <- gene_info[2]
+    
+    # Check if the gene_description contains "; "
+    # It is assumed that if there is no "; ", then there is no gene_name
+    if (grepl("; ", gene_description)) {
+        gene_info <- unlist(strsplit(gene_description, "; ", fixed = TRUE))
+        gene_name <- gene_info[1]
+        description <- gene_info[2]
+    } else {
+        gene_name <- NA
+        description <- gene_description
+    }
     
     entrez_ids <- c(entrez_ids, entrez_id)
     gene_names <- c(gene_names, gene_name)
