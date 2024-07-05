@@ -14,3 +14,7 @@ Get the gene names from a KEGG pathway, useful to get a list of genes from which
 
 ### get_KEGG_pathway_gene_names_table.R
 Same thing but instead it outputs a table with the entrez_gene_id, gene_name and gene_description
+
+### human_to_mouse_symbol_table.R
+
+Get a table of human to mouse symbols.
