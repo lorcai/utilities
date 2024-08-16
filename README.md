@@ -22,7 +22,7 @@ Get a table of human to mouse symbols. Based on the [HOM_MouseHumanSequence.rpt 
 - ### jamenrich-enrichdf2er.R
 From [R/jamenrich-enrichdf2er.R](https://github.com/jmw86069/multienrichjam/)
 
-Found in: R/jamenrich-enrichdf2er.R, putting it here because I KEEP FORGETTING IT EXISTS.
+Find it in: [R/jamenrich-enrichdf2er.R](https://github.com/jmw86069/multienrichjam/blob/master/R/jamenrich-enrichdf2er.R), putting it here because **I KEEP FORGETTING IT EXISTS**.
 
 Loads an enrichment results table (data.frame) into an enrichResult object. Most clusterProfiler plot functions work only with this object.
 For when you get someone else's analysis and do not have access to the Rdata from the session. 
