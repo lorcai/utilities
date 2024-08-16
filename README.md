@@ -20,12 +20,37 @@ Remember to change the keggEntry for the pathway you want. If there is a gene wi
 Get a table of human to mouse symbols. Based on the [HOM_MouseHumanSequence.rpt file from MGI database](http://www.informatics.jax.org/downloads/reports/HOM_MouseHumanSequence.rpt).
 
 - ### jamenrich-enrichdf2er.R
-From [R/jamenrich-enrichdf2er.R](https://github.com/jmw86069/multienrichjam/)
+From the [multienrichjap package](https://github.com/jmw86069/multienrichjam/)
 
 Find it in: [R/jamenrich-enrichdf2er.R](https://github.com/jmw86069/multienrichjam/blob/master/R/jamenrich-enrichdf2er.R), putting it here because **I KEEP FORGETTING IT EXISTS**.
 
 Loads an enrichment results table (data.frame) into an enrichResult object. Most clusterProfiler plot functions work only with this object.
 For when you get someone else's analysis and do not have access to the Rdata from the session. 
+
+Be careful, I couldn't get the adjusted pvalues to load properly. Had so modify the object after creating it, example:
+
+```R
+# Select datafile
+data_file <- 'ConditionXvsConditionY.all_GOenrich.csv'
+
+# Load data into df
+enrichDF <- read.delim(data_file, sep="\t", header=TRUE, stringsAsFactors=FALSE, quote="\"")
+
+# Transform into enrichResult object
+egs <- enrichDF2enrichResult(enrichDF,
+pAdjustMethod="BH",
+pvalueCutoff=0.05,	# DOESN'T SEEM TO WORK
+keyColname="GOID",
+geneColname="geneID",
+geneRatioColname="GeneRatio",
+geneDelim="/",
+pvalueColname="pvalue",
+descriptionColname="Description")
+
+# Substitute the p.adjust slot with the pre-calculated padjs on the file
+egs@result$p.adjust <-egs@result$padj
+
+```
 
 - ### fast_ollama_setup.md
 
