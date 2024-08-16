@@ -17,7 +17,7 @@ Remember to change the keggEntry for the pathway you want. If there is a gene wi
 
 - ### human_to_mouse_symbol_table.R
 
-Get a table of human to mouse symbols.
+Get a table of human to mouse symbols. Based on the [HOM_MouseHumanSequence.rpt file from MGI database](http://www.informatics.jax.org/downloads/reports/HOM_MouseHumanSequence.rpt).
 
 - ### jamenrich-enrichdf2er.R
 From [R/jamenrich-enrichdf2er.R](https://github.com/jmw86069/multienrichjam/)
@@ -26,3 +26,7 @@ Found in: R/jamenrich-enrichdf2er.R, putting it here because I KEEP FORGETTING I
 
 Loads an enrichment results table (data.frame) into an enrichResult object. Most clusterProfiler plot functions work only with this object.
 For when you get someone else's analysis and do not have access to the Rdata from the session. 
+
+- ### fast_ollama_setup.md
+
+A minimal tutorial to set up a local LLM interface. An encouragement for lazy friends to try it. 
