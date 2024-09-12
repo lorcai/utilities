@@ -62,6 +62,12 @@ docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-
 
 You will have to make an account (this is stored locally so you don't even really need to input a real email).
 
+The ollama container comes with no models. Start it up with llama3 so that it downloads it:
+
+```bash
+docker exec -it ollama ollama run llama3
+```
+Then just do `/bye` and go back to the browser.
 
 ---
 ---
