@@ -9,3 +9,9 @@
 
 - [Venn for GO terms](https://wwalter.shinyapps.io/Venn/) from [Wencke Walter](https://github.com/wencke)
 - [Venn for lists](https://jvenn.toulouse.inrae.fr/app/index.html)
+
+# Stats
+- [Kaplan-Meier Plotter](https://kmplot.com/analysis/)
+
+# Other
+- [Depmap](https://depmap.org/portal/). Test and correlate different molecular measurements in a variety of cancer cell lines.
